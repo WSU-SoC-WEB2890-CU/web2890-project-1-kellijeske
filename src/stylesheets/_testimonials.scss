@@ -1,0 +1,140 @@
+@use 'custom' as *;
+
+
+.testimonials {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.carousel{
+  background-color: $black;
+  background-image: url("/images/diagonal-lines.png");
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+
+  margin: 0 -50px;
+  padding: 20px;
+}
+
+.carousel-inner{
+  min-height: 400px;
+
+}
+
+
+
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chat-bubble {
+  display: inline-block;
+  position: relative;
+  background: #ffe0b2;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 450px;
+  margin: 15px auto;
+  font-size: 1.1em;
+  color: #5d4037;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.chat-bubble:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #ffe0b2;
+}
+
+.chat-bubble:hover {
+  background-color: #ffcc80;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.chat-bubble span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #3e2723;
+  font-style: italic;
+}
+
+
+
+
+
+
+/* Button styles */
+button.see-more-reviews {
+  background-color: $black;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.see-more-reviews:hover {
+  background-color: $primary;
+}
+
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: $black;
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-control-prev {
+  left: 60px; 
+  align-self: flex-end;
+  bottom: -70px;
+
+}
+
+.carousel-control-next {
+  right: 60px; 
+  align-self: flex-end;
+  bottom: -70px;
+}
+
+
+// Responsive stuff-- Media query
+@media (max-width: 768px) {
+  .chat-bubble {
+    max-width: 100%;
+  }
+
+  .carousel-control-prev{
+    left: 10px;
+
+  }
+  .carousel-control-next {
+    right: 10px;
+
+  }
+}
+
