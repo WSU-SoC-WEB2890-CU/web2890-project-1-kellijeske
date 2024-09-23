@@ -1,0 +1,91 @@
+@use 'custom' as *;
+
+.advantages {
+    background-image: url("/images/car-keys.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+
+    h2 {
+        padding: 20px;
+        margin-top: 26px;
+    }
+}
+
+.ribbon {
+    background-color: $black;
+    height: 100px;
+    width: 100%; 
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    left: 0;
+
+    h2 {
+        padding: 20px;
+        margin-top: 26px;
+    }
+}
+
+/* Ribbon fishtail shape */
+.ribbon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 50px; 
+    background-color: $primary;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.bi {
+    font-size: 1.5rem;
+    color: $black;
+}
+
+.advantages-column{
+    background-color: rgba($white, 0.6);
+    margin-top: 20px;
+
+}
+
+
+
+hr{
+    border: 3px solid $primary;
+    border-radius: 5px;
+}
+
+
+
+// Responsive stuff
+@media (min-width: 992px) {
+    .advantages {
+        background-image: url('/images/car-keys.jpg');
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .ribbon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .col-lg-6 {
+        padding-left: 40px;
+    }
+}

@@ -1,0 +1,14 @@
+@use 'custom' as *;
+
+
+button {
+    padding: 10px 20px;
+    background-color: $theme-1;
+    color: white;
+    border: none;
+}
+  
+button:hover {
+    background-color: #d88d0a;
+  
+}

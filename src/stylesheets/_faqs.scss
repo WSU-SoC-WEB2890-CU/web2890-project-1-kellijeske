@@ -1,0 +1,40 @@
+@use 'custom' as *;
+
+
+.faqs{
+    background-color: black;
+    background-image: url('/images/diagonal-lines.png');
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.accordion-button {
+    background-color: $black;
+    color: $primary;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+
+}
+
+.accordion-button {
+    position: relative; 
+}
+
+
+
+.accordion-button:focus {
+    border-color: none;
+    outline: 0;
+}
+
+.accordion-button.collapsed {
+    background-color: $black;
+    color: $primary;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: $primary;
+    color: $black;
+}
